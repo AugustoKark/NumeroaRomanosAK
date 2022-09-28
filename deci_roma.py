@@ -2,7 +2,30 @@ import unittest
 
 
 def convert_decimal_to_roman(decimal_number):
-    roman1 = ''
+    
+    roman_number = ''
+    decimal_number = int(decimal_number)
+    if decimal_number < 1 or decimal_number > 3999:
+        return 'out of range'
+    else:
+        while decimal_number > 0:
+            for roman, decimal in (('M', 1000), ('CM', 900), ('D', 500), ('CD', 400), ('C', 100),
+             ('XC', 90), ('L', 50), ('XL', 40), ('X', 10), ('IX', 9), ('V', 5),
+             ('IV', 4), ('I', 1)):
+                while decimal_number >= decimal:
+                    roman_number += roman
+                    decimal_number -= decimal
+        return roman_number
+
+           
+
+
+
+
+
+
+
+    '''roman1 = ''
     roman2 = ''
     roman3 = ''
     decimal_number_units = decimal_number%10
@@ -57,7 +80,7 @@ def convert_decimal_to_roman(decimal_number):
 
     roman = roman3 + roman1 + roman2
 
-    return roman
+    return roman '''
 
 class TestDecimalToRoman(unittest.TestCase):
 
