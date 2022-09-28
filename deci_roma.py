@@ -2,7 +2,6 @@ import unittest
 
 
 def convert_decimal_to_roman(decimal_number):
-    
     roman_number = ''
     decimal_number = int(decimal_number)
     if decimal_number < 1 or decimal_number > 3999:
@@ -16,15 +15,6 @@ def convert_decimal_to_roman(decimal_number):
                     roman_number += roman
                     decimal_number -= decimal
         return roman_number
-
-           
-
-
-
-
-
-
-
     '''roman1 = ''
     roman2 = ''
     roman3 = ''
